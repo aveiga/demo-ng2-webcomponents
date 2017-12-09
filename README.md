@@ -1,4 +1,6 @@
-# TestImportWebComponents
+# Demo: Angular2+ and Web Components integration
+
+This is a demo project about how to integrate standard Web Components (or Web Components built with Polymer 2) in an Angular2+ application.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.3.
 
