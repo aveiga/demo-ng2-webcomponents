@@ -1,5 +1,5 @@
 <link rel="import" href="https://cdn.rawgit.com/download/polymer-cdn/2.3.1/lib/polymer/polymer.html">
-<link rel="import" href="import-ng.html">
+<!-- <link rel="import" href="import-ng.html"> -->
 
 
 <dom-module id="demo-ng2">
@@ -31,6 +31,29 @@
             value: 'demo-ng2'
           }
         };
+      }
+      _attachDom(dom) {
+        this.appendChild(dom);
+
+        var inline = document.createElement('script');
+        inline.type = 'text/javascript';
+        inline.src = '../dist/inline.bundle.js';
+        this.appendChild(inline);
+
+        var polyfills = document.createElement('script');
+        polyfills.type = 'text/javascript';
+        polyfills.src = '../dist/polyfills.bundle.js';
+        this.appendChild(polyfills);
+
+        var main = document.createElement('script');
+        main.type = 'text/javascript';
+        main.src = '../dist/main.bundle.js';
+        this.appendChild(main);
+
+        var link = document.createElement('link');
+        link.rel = "stylesheet";
+        link.src = "../dist/styles.bundle.css";
+        this.appendChild(link);
       }
     }
 
